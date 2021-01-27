@@ -1,6 +1,7 @@
 import { StylesProvider } from '@material-ui/core'
 import Layout from '../Layout/Layout'
 import SearchInput from '../SearchInput/SearchInput'
+import CountriesTable from '../CountriesTable/CountriesTable'
 import styles from '../../styles/Home.module.css'
 
 export default function Home({ countries}) {
@@ -8,6 +9,7 @@ export default function Home({ countries}) {
   return <Layout>
         <div className={styles.counts}>Find {countries.length} countries</div>
         <SearchInput placeholder="Filter by Name, Region, Subregion"/>
+        <CountriesTable countries={countries}/>
       </Layout>
   
 }
