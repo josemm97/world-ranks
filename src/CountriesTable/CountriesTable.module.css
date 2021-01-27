@@ -18,7 +18,14 @@
     
 }
 .heading_name{
-    text-align: left;
+    justify-content: flex-start;
+}
+.heading_arrow{
+    color:var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2px;
 }
 .row{
     display: flex;
