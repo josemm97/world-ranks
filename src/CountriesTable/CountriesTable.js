@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {
   KeyboardArrowDownRounded,
   KeyboardArrowUpRounded,
@@ -44,7 +45,7 @@ function CountriesTable({ countries }) {
   const [value, setValue] = useState();
   const orderCountries = orderBy(countries,value ,direction);
  
-
+ console.log("countries",)
   const switchDirection = () => {
     if (!direction) {
       setDirection("desc");
@@ -71,11 +72,13 @@ function CountriesTable({ countries }) {
           <SortArrow  direction={direction}/>
         </button>
       </div>
-      {orderCountries.map((country) => (
-        <div className={styles.row}>
-          <div className={styles.name}>{country.name}</div>
+      {orderCountries.map((country,id) => (
+       <Link href={`/country/${country.alpha2Code}`}>
+       <div className={styles.row}>
+          <div className={styles.name} key={id.name}>{country.name}</div>
           <div className={styles.population}>{country.population}</div>
         </div>
+       </Link>
       ))}
     </>
   );
