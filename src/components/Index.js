@@ -35,12 +35,17 @@ export default function Home({ countries }) {
   console.log("data", countries);
   return (
     <Layout>
-      <div className={styles.counts}>Find {countries.length} countries</div>
-      <SearchInput
-        placeholder="Filter by Name, Region, Subregion"
-        onChange={onInputChange}
-      />
+      <div className={styles.container}>
+        <div className={styles.counts}>Find {countries.length} countries</div>
+        <div className={styles.input}>
+          <SearchInput
+            placeholder="Filter by Name, Region, Subregion"
+            onChange={onInputChange}
+          />
+        </div>
+      </div>
       <CountriesTable countries={filteredCountries} />
+
     </Layout>
   );
 }

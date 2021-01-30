@@ -4,3 +4,17 @@
 .overview_name{
     text-align: center;
 }
+@media screen and (min-width:720px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+    }
+    .counts{
+        flex: 1;    
+    }
+    .input{
+        flex: 4;
+    }
+}
