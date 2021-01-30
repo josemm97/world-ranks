@@ -3,12 +3,16 @@
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 .header{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 32px;
+    cursor: pointer;
+    
 }
 .main{
   
@@ -18,4 +22,20 @@
     text-align: center;
     font-size: 0.75rem;
 
+}
+.button_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.themeSwitcher{
+    
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin-left: 4px;
+    color: var(--text-color-secondary);
+    outline: none;
+    cursor: pointer;
+    
 }
